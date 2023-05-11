@@ -1,4 +1,4 @@
 export const environment = {
-  production: true,
+  production: false,
   URL: 'https://pback-production.up.railway.app/'
 };
