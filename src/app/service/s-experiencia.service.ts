@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class SExperienciaService {
   //URL = 'http://localhost:8080/explab/';
-  URL = environment.URL + 'explab/';
+  URL = 'https://pback-production.up.railway.app/explab/';
 
   constructor(private httpClient: HttpClient) { }
 

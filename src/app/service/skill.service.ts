@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class SkillService {
-  URL = environment.URL + 'skill/';
+  URL = 'https://pback-production.up.railway.app/skill/';
   
   constructor(private httpClient: HttpClient) { }
 

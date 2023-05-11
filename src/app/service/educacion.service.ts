@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class EducacionService {
-    URL = environment.URL + 'educacion/';
+    URL = 'https://pback-production.up.railway.app/educacion/';
   
     constructor(private httpClient : HttpClient) { }
 
