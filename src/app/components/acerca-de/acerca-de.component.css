@@ -7,10 +7,9 @@ div {
     text-align: left;
 }
 
-
 /* foto de perfil estilo */
 
-@media (min-width: 576px){
+@media (min-width: 576px) {
     #fotoPerfil {
         position: absolute;
         width: 15%;
@@ -21,7 +20,7 @@ div {
     }
 }
 
-@media (max-width: 575px){
+@media (max-width: 575px) {
     #fotoPerfil {
         position: absolute;
         width: 20%;
@@ -32,13 +31,11 @@ div {
     }
 }
 
-
 /* el nombre */
 #nombre {
     font-weight: bold;
     margin-top: 40px;
     font-family: sans-serif;
-
 }
 
 h1 {
@@ -50,10 +47,10 @@ h1 {
     font-family: Raleway, sans-serif;
 }
 
-.row{
+.row {
     background-color: #FFFF;
 }
-.row div{
+.row div {
     background-color: #FFFF;
 }
 
@@ -61,4 +58,14 @@ h1 {
     background-color: #e5e5e5;
     border-radius: 10px;
     padding: 5px;
+}
+
+/* Estilos para el botón "Editar perfil" */
+button.btn-primary {
+    float: right;
+    font-weight: 800;
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 5px 10px;
+    margin-top: -10px;
 }
