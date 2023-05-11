@@ -56,3 +56,12 @@ img{
     color: white;
     font-weight: 700;
 }
+
+.logo {
+    background-color: white;
+    transition: background-color .5s;
+}
+
+.logo:hover{
+    background-color: rgb(19, 205, 238);
+}
