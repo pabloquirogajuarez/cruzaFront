@@ -5,7 +5,9 @@
 export const environment = {
 //ambientado para desarrollo
   production: false,
-  URL: 'http://localhost:8080/'
+  //URL: 'http://localhost:8080/'
+  //prueba de porque anda mal y no me detecta el enviorment de prod xd
+  URL: 'https://pback-production.up.railway.app/'
 };
 
 /*
