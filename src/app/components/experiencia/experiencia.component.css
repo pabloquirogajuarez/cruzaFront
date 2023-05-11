@@ -15,8 +15,10 @@ h1, h3{
 h1 {
     font-weight: 800;
 }
+.fecha{
+    font-style: italic;
+}
 
-/* cambios */
 body{margin-top:20px;}
 .timeline {
     border-left: 3px solid #272727;
