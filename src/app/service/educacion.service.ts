@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class EducacionService {
     URL = 'https://pback-production.up.railway.app/educacion/';
+    //URL = 'http://localhost:8080/educacion/';
   
     constructor(private httpClient : HttpClient) { }
 
