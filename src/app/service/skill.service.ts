@@ -3,7 +3,6 @@ import { identifierName } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Skill } from '../model/skill';
-import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
