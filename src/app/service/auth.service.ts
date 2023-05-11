@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = environment.URL +'auth/';
+  URL = 'https://pback-production.up.railway.app/educacion/auth/';
 
   constructor(private httpClient: HttpClient) { }
 
