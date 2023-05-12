@@ -18,3 +18,12 @@ div ul li h1{
     font-weight: 600;
 }
 
+.fecha{
+    font-style: italic;
+    background-color: #333333; 
+    border-radius: 20px; 
+    padding: 5px 10px; 
+    display: inline-block; 
+    color: #ffffff; 
+}
+

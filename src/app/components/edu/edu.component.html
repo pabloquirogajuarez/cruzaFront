@@ -12,9 +12,9 @@
                 <tr *ngFor="let Educacion of educacion">
                     <td>
                         <h2>{{Educacion.nombreE}}</h2>
+                        <p class="fecha badge">{{Educacion.fechaInicioE}} - {{Educacion.fechaFinE}}</p>
+                        <p>{{Educacion.descripcionE}}</p>
                     </td>
-                    <td>{{Educacion.descripcionE}}</td>
-                    <td>{{Educacion.fechaInicioE}} - {{Educacion.fechaFinE}}</td>
                     <td *ngIf="isLogged"><button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}"><i
                                 class="bi bi-pencil-square"></i> Editar</button></td>
                     <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Educacion.id)"><i
