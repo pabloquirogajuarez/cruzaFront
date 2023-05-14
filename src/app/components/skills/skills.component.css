@@ -36,3 +36,7 @@ h1 {
     border-radius: 10px; 
   }
   
+  .botones-edicion {
+    display: flex;
+    justify-content: center;
+  }
