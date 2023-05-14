@@ -33,3 +33,11 @@ img {
 .card-title {
     font-weight: 600;
 }
+
+.proyecto {
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+.proyecto:hover {
+    transform: scale(1.05); /* Aplica un efecto de escala al pasar el mouse por encima */
+}
