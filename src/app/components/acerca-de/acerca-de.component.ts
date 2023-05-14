@@ -23,10 +23,14 @@ export class AcercaDeComponent implements OnInit {
 
   }
 
-  cargarPersona(){
-    this.personaService.detail(1).subscribe(data =>
-      {this.persona=data}
-      )
+  cargarPersona() {
+    this.personaService.detail(1).subscribe(data => {
+      if (data) {
+        this.persona = data;
+      } else {
+        //
+      }
+    });
   }
 
 }
