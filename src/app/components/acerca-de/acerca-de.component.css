@@ -2,10 +2,6 @@
     padding: 20px;
 }
 
-div {
-    background-color: #eff2f5;
-    text-align: left;
-}
 
 /* foto de perfil estilo */
 
@@ -60,7 +56,6 @@ h1 {
     padding: 5px;
 }
 
-/* Estilos para el botón "Editar perfil" */
 button.btn-primary {
     float: right;
     font-weight: 800;
@@ -68,4 +63,13 @@ button.btn-primary {
     font-size: 12px;
     padding: 5px 10px;
     margin-top: -10px;
+}
+
+
+.badge {
+    background-color: #bdbdbd;
+    border-radius: 20px; 
+    padding: 5px 10px; 
+    display: inline-block; 
+    color: #000000; 
 }
