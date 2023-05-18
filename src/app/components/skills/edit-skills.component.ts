@@ -10,6 +10,8 @@ import { SkillService } from 'src/app/service/skill.service';
 })
 export class EditSkillComponent implements OnInit {
   skill: Skill = null;
+  successMessage: string;
+  errorMessage: string;
 
   constructor(
     private skillS: SkillService,
@@ -22,8 +24,10 @@ export class EditSkillComponent implements OnInit {
       data => {
         this.skill = data;
       }, err => {
-        alert("Error al modificar");
-        this.router.navigate(['']);
+        this.errorMessage = "Error al modificar, revisa los campos.";
+        setTimeout(() => {
+          this.router.navigate(['']);
+        }, 2500);
       }
     )
   }
@@ -32,10 +36,15 @@ export class EditSkillComponent implements OnInit {
     const id = this.activatedRouter.snapshot.params['id'];
     this.skillS.update(id, this.skill).subscribe(
       data => {
-        this.router.navigate(['']);
+        this.successMessage = "Skill editada correctamente, redirigiendo...";
+        setTimeout(() => {
+          this.router.navigate(['']);
+        }, 2500);
       }, err => {
-        alert("Error al modificar la skill");
-        this.router.navigate(['']);
+        this.errorMessage = "Error al modificar, revisa los campos.";
+        setTimeout(() => {
+          this.router.navigate(['']);
+        }, 2500);
       }
     )
   }

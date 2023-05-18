@@ -11,6 +11,10 @@ import { EducacionService } from 'src/app/service/educacion.service';
 export class EditeducacionComponent implements OnInit {
   educacion: Educacion = null;
 
+  //alerts
+  successMessage: string;
+  errorMessage: string;
+
 
 
   constructor(
@@ -25,8 +29,10 @@ export class EditeducacionComponent implements OnInit {
       data =>{
         this.educacion = data;
       }, err =>{
-         alert("Error al modificar");
-         this.router.navigate(['']);
+        this.errorMessage = "Error al modificar, revisa los campos.";
+        setTimeout(() => {
+          this.router.navigate(['']);
+        }, 2500);
       }
     )
   }
@@ -35,10 +41,15 @@ export class EditeducacionComponent implements OnInit {
     const id = this.activatedRouter.snapshot.params['id'];
     this.educacionS.update(id, this.educacion).subscribe(
       data => {
-        this.router.navigate(['']);
+        this.successMessage = "Educación editada correctamente, redirigiendo...";
+        setTimeout(() => {
+          this.router.navigate(['']);
+        }, 2500);
       }, err => {
-        alert("Error al modificar la educacion");
-        this.router.navigate(['']);
+        this.errorMessage = "Error al modificar educación.";
+        setTimeout(() => {
+          this.router.navigate(['']);
+        }, 2500);
       }
     )
   }

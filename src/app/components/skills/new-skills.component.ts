@@ -11,6 +11,8 @@ import { SkillService } from 'src/app/service/skill.service';
 export class NewSkillComponent implements OnInit {
   nombre: string;
   porcentaje: number;
+  successMessage: string;
+  errorMessage: string;
 
   constructor(private skillS: SkillService, private router: Router) { }
 
@@ -21,11 +23,15 @@ export class NewSkillComponent implements OnInit {
     const skill = new Skill(this.nombre, this.porcentaje);
     this.skillS.save(skill).subscribe(
       data => {
-        alert("Skill creada correctamente");
-        this.router.navigate(['']);
+        this.successMessage = "Skill creada correctamente, redirigiendo...";
+        setTimeout(() => {
+          this.router.navigate(['']);
+        }, 2500);
       }, err =>{
-        alert("Fallo al añadir la skill");
-        this.router.navigate(['']);
+        this.errorMessage = "Error al añadir el skill, revisa los campos.";
+        setTimeout(() => {
+          this.router.navigate(['']);
+        }, 2500);
       }
     )
   }

@@ -14,6 +14,10 @@ export class NeweducacionComponent implements OnInit {
   fechaInicioE: string;
   fechaFinE: string;
 
+  //alerts
+  successMessage: string;
+  errorMessage: string;
+
   constructor(private educacionS: EducacionService, private router: Router) { }
 
   ngOnInit(): void {
@@ -23,11 +27,15 @@ export class NeweducacionComponent implements OnInit {
     const educacion = new Educacion(this.nombreE, this.descripcionE, this.fechaInicioE, this.fechaFinE);
     this.educacionS.save(educacion).subscribe(
       data =>{
-        alert("Educacion añadida correctamente");
-        this.router.navigate(['']);
+        this.successMessage = "Añadiste una nueva educación, redirigiendo...";
+        setTimeout(() => {
+          this.router.navigate(['']);
+        }, 2500);
       }, err =>{
-        alert("falló");
-        this.router.navigate(['']);
+        this.errorMessage = "Error al añadir la educación.";
+        setTimeout(() => {
+          this.router.navigate(['']);
+        }, 2500);
       }
     )
   }

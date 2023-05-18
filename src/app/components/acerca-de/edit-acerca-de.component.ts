@@ -11,6 +11,10 @@ import { PersonaService } from 'src/app/service/persona.service';
 export class EditAcercaDeComponent implements OnInit{
   persona: persona = null;
 
+  //alerts
+  successMessage: string;
+  errorMessage: string;
+
   constructor(private activatedRouter: ActivatedRoute,
     private personaService: PersonaService,
     private router: Router){ }
@@ -21,8 +25,10 @@ export class EditAcercaDeComponent implements OnInit{
       data =>{
         this.persona = data;
       }, err =>{
-         alert("Error al modificar");
-         this.router.navigate(['']);
+        this.errorMessage = "Error al modificar, revisa los campos.";
+        setTimeout(() => {
+          this.router.navigate(['']);
+        }, 2500);
       }
     )
   }
@@ -31,10 +37,15 @@ export class EditAcercaDeComponent implements OnInit{
     const id = this.activatedRouter.snapshot.params['id'];
     this.personaService.update(id, this.persona).subscribe(
       data => {
-        this.router.navigate(['']);
+        this.successMessage = "Perfil editado correctamente, redirigiendo...";
+        setTimeout(() => {
+          this.router.navigate(['']);
+        }, 2500);
       }, err => {
-        alert("Error al modificar el perfil");
-        this.router.navigate(['']);
+        this.errorMessage = "Error al modificar el perfil.";
+        setTimeout(() => {
+          this.router.navigate(['']);
+        }, 2500);
       }
     )
   }

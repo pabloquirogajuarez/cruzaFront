@@ -10,6 +10,8 @@ import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 })
 export class EditExperienciaComponent implements OnInit {
   expLab: Experiencia = null;
+  successMessage: string;
+  errorMessage: string;
 
   constructor(private sExperiencia: SExperienciaService, private activatedRouter: ActivatedRoute,
     private router: Router) { }
@@ -20,8 +22,10 @@ export class EditExperienciaComponent implements OnInit {
       data =>{
         this.expLab = data;
       }, err =>{
-        alert("Error al modificar experiencia");
-        this.router.navigate(['']);
+        this.errorMessage = "Error al modificar, revisa los campos.";
+        setTimeout(() => {
+          this.router.navigate(['']);
+        }, 2500);
       }
     )
   }
@@ -30,10 +34,15 @@ export class EditExperienciaComponent implements OnInit {
     const id = this.activatedRouter.snapshot.params['id'];
     this.sExperiencia.update(id, this.expLab).subscribe(
       data => {
-        this.router.navigate(['']);
+        this.successMessage = "Experiencia editada correctamente, redirigiendo...";
+        setTimeout(() => {
+          this.router.navigate(['']);
+        }, 2500);
       }, err =>{
-         alert("Error al modificar experiencia");
-         this.router.navigate(['']);
+        this.errorMessage = "Error al modificar, revisa los campos.";
+        setTimeout(() => {
+          this.router.navigate(['']);
+        }, 2500);
       }
     )
   }

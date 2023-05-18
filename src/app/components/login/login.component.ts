@@ -18,6 +18,11 @@ export class LoginComponent implements OnInit {
   password! : string;
   roles: string[] = [];
   errMsj!: string;
+  //alerts
+  successMessage: string;
+  errorMessage: string;
+  //
+  showPassword = false;
 
   constructor(private tokenService: TokenService, private authService: AuthService, private router: Router) { }
 
@@ -38,14 +43,17 @@ export class LoginComponent implements OnInit {
         this.tokenService.setUserName(data.nombreUsuario);
         this.tokenService.setAuthorities(data.authorities);
         this.roles = data.authorities;
-        this.router.navigate([''])
+          this.router.navigate(['']);
       }, err =>{
         this.isLogged = false;
         this.isLogginFail = true;
-        this.errMsj = err.error.mensaje;
-        console.log(this.errMsj);
+        this.errorMessage = "Usuario o contraseña incorrecta.";
         
       })
+  }
+
+  toggleShowPassword(): void {
+    this.showPassword = !this.showPassword;
   }
 
 }

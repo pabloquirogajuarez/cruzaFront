@@ -13,6 +13,8 @@ export class NewExperienciaComponent implements OnInit {
   descripcionE: string = '';
   fechaInicioE: string = '';
   fechaFinE: string = '';
+  successMessage: string;
+  errorMessage: string;
 
   constructor(private sExperiencia: SExperienciaService, private router: Router) { }
 
@@ -23,11 +25,15 @@ export class NewExperienciaComponent implements OnInit {
     const expe = new Experiencia(this.nombreE, this.descripcionE, this.fechaInicioE, this.fechaFinE);
     this.sExperiencia.save(expe).subscribe(
       data => {
-        alert("Añadiste una nueva experiencia.");
-        this.router.navigate(['']);
+        this.successMessage = "Añadiste una nueva experiencia, redirigiendo...";
+        setTimeout(() => {
+          this.router.navigate(['']);
+        }, 2500);
       }, err => {
-        alert("Hubo un error al crear esta experiencia.");
-        this.router.navigate(['']);
+        this.errorMessage = "Error al añadir la experiencia.";
+        setTimeout(() => {
+          this.router.navigate(['']);
+        }, 2500);
       }
     )
   }

@@ -41,6 +41,25 @@ img{
     
 }
 
+.password-input-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .password-input-wrapper input {
+    flex: 1;
+    border-radius: 15px 0 0 15px;
+  }
+  
+  .password-input-wrapper button {
+    margin-left: -1px;
+    color: white;
+  }
+  
+  .password-toggle-icon {
+    font-size: 1.25rem;
+  }
+
 /* Estilos para los inputs */
     input.form-control {
         transition: border-color 0.3s ease-in-out;
