@@ -1,46 +1,49 @@
-<section class="vh-100 gradient-custom">
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-        <div class="card bg-dark text-white" style="border-radius: 2rem;">
-          <div class="card-body p-5 text-center">
-            <div class="mb-md-5 mt-md-4 pb-5">
-              <div class="d-flex justify-content-center align-items-center">
-                <h2 class="mb-2">Bienvenido</h2> 
-                <img src="../../../assets/wavingHand.png" alt="" class="ml-2 mt-2 mb-4">
-              </div>
-              <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
-                <div *ngIf="successMessage" class="alert alert-success" role="alert">
-                  {{ successMessage }}
+<div class="login-container">
+  <section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 2rem;">
+            <div class="card-body p-5 text-center">
+              <div class="mb-md-5 mt-md-4 pb-5">
+                <div class="d-flex justify-content-center align-items-center">
+                  <h2 class="mb-2">Bienvenido</h2>
+                  <img src="../../../assets/wavingHand.png" alt="" class="ml-2 mt-2 mb-4">
                 </div>
-                <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
-                  {{ errorMessage }}
-                </div>
-                <div class="form-outline form-white mb-4">
-                  <p class="text-white-50">Ingrese un usuario y contraseña</p>
-                  <input type="email" id="nombreUsuario" name="nombreUsuario" class="form-control form-control-lg"
-                    [(ngModel)]="nombreUsuario" required />
-                </div>
-                <div class="form-outline form-white mb-4">
+                <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+                  <div *ngIf="successMessage" class="alert alert-success" role="alert">
+                    {{ successMessage }}
+                  </div>
+                  <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+                    {{ errorMessage }}
+                  </div>
                   <div class="form-outline form-white mb-4">
-                    <div class="password-input-wrapper">
-                      <input type="password" id="password" name="password" class="form-control form-control-lg" [(ngModel)]="password"
-                        [type]="showPassword ? 'text' : 'password'" required />
-                      <button type="button" class="btn btn-link text-white-50" (click)="toggleShowPassword()">
-                        <span class="password-toggle-icon">
-                          <i [ngClass]="showPassword ? 'bi bi-eye' : 'bi bi-eye-slash'"></i>
-                        </span>
-                      </button>
+                    <p class="text-white-50">Ingrese un usuario y contraseña</p>
+                    <input type="email" id="nombreUsuario" name="nombreUsuario" class="form-control form-control-lg"
+                      [(ngModel)]="nombreUsuario" required />
+                  </div>
+                  <div class="form-outline form-white mb-4">
+                    <div class="form-outline form-white mb-4">
+                      <div class="password-input-wrapper">
+                        <input type="password" id="password" name="password" class="form-control form-control-lg"
+                          [(ngModel)]="password" [type]="showPassword ? 'text' : 'password'" required />
+                        <button type="button" class="btn btn-link text-white-50" (click)="toggleShowPassword()">
+                          <span class="password-toggle-icon">
+                            <i [ngClass]="showPassword ? 'bi bi-eye' : 'bi bi-eye-slash'"></i>
+                          </span>
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <button class="btn btn-outline-light btn-lg px-5" type="submit">Iniciar sesión</button>
-              </form>
+                  <button class="btn btn-outline-light btn-lg px-5" type="submit">Iniciar sesión</button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
+
 <app-footer></app-footer>

@@ -1,14 +1,18 @@
-*{
-    font-family: Raleway, sans-serif;
+.login-container {
+  min-height: calc(100vh - 100px); /* Ajusta la altura del contenedor del formulario */
 }
+
 .gradient-custom {
-    background-color: #99e4ff;
-    background-image:
-        radial-gradient(at 70% 83%, rgb(255, 255, 255) 0px, transparent 50%),
-        radial-gradient(at 67% 3%, rgb(23, 201, 255) 0px, transparent 50%),
-        radial-gradient(at 53% 40%, rgb(255, 255, 255) 0px, transparent 50%),
-        radial-gradient(at 73% 43%, rgb(59, 194, 247) 0px, transparent 50%);
+  background-color: #99e4ff;
+  background-image:
+    radial-gradient(at 70% 83%, rgb(255, 255, 255) 0px, transparent 50%),
+    radial-gradient(at 67% 3%, rgb(23, 201, 255) 0px, transparent 50%),
+    radial-gradient(at 53% 40%, rgb(255, 255, 255) 0px, transparent 50%),
+    radial-gradient(at 73% 43%, rgb(59, 194, 247) 0px, transparent 50%);
 }
+
+/* Resto de estilos del formulario y del footer */
+
 
 h2{
     font-weight: 700;
