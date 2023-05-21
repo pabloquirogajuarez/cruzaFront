@@ -105,9 +105,9 @@ body{margin-top:20px;}
 
 .timeline .event:after {
     -webkit-box-shadow: 0 0 0 3px #2c2c2c;
-    box-shadow: 0 0 0 3px #222222;
+    box-shadow: 0 0 0 3px #2222224f;
     left: -55.8px;
-    background: #dcf4fd;
+    background: #272727;
     border-radius: 50%;
     height: 9px;
     width: 9px;
