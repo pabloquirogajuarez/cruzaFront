@@ -11,12 +11,13 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: opacity 0.3s ease;
-}
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+  }
+  
+  .circulo:hover {
+      transform: scale(1.02); /* Aplica un efecto de escala al pasar el mouse por encima */
+  }
 
-.circulo:hover {
-  opacity: 0.8;
-}
 
 
 .badge {

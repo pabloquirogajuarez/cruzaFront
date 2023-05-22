@@ -141,3 +141,10 @@ body{margin-top:20px;}
     right: -55.8px;
 }
 
+.event {
+    transition: transform 0.3s ease;
+  }
+  
+  .event:hover {
+    transform: translateY(-8px);
+  }
