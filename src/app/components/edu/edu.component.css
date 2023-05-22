@@ -27,3 +27,11 @@ div ul li h1{
     color: #ffffff; 
 }
 
+.efecto{
+    transition: transform 0.3s ease;
+}
+
+.efecto:hover {
+    transform: scale(1.01); 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
+}

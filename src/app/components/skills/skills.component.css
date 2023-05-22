@@ -11,6 +11,11 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.circulo:hover {
+  opacity: 0.8;
 }
 
 
