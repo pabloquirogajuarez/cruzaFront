@@ -29,9 +29,11 @@ div ul li h1{
 
 .efecto{
     transition: transform 0.3s ease;
+    border-radius: 10px;
 }
 
 .efecto:hover {
     transform: scale(1.01); 
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 20px;
 }
