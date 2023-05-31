@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="container">
+        <div class="logo">
+            <img src="../../../assets/cruzalogov5.png" id="logoArgPrograma">
+        </div>
+        <div class="redes">
+            <div>
+                <a href="https://www.instagram.com/cruzabar/" target="_blank"><img src="../../../assets/instagram.png" id="instagram"></a>
+                <!--<a href=""><img src="../../../assets/twitter.png" id="twitter"></a> -->
+                <!--<a href=""><img src="../../../assets/facebook.png" id="facebook"></a> -->
+                
+                <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">Ingresar</button>
+                <button type="button" class="btn btn-outline-light" routerLink="pedidos" *ngIf="isLogged">Ver Pedidos</button>
+                <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesión</button>
+                
+            </div>            
+        </div>
+    </div>
+</div>

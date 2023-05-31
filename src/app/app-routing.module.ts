@@ -2,26 +2,33 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
-import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
-import { NeweducacionComponent } from './components/edu/neweducacion.component';
-import { EditeducacionComponent } from './components/edu/editeducacion.component';
-import { EditSkillComponent } from './components/skills/edit-skills.component';
-import { NewSkillComponent } from './components/skills/new-skills.component';
+import { NewEntradasComponent } from './components/entradas/new-entradas.component';
+import { EditEntradasComponent } from './components/entradas/edit-entradas.component';
+import { NeweducacionComponent } from './components/platoprincipal/neweducacion.component';
+import { EditeducacionComponent } from './components/platoprincipal/editeducacion.component';
+import { EditSkillComponent } from './components/bebidas/edit-skills.component';
+import { NewSkillComponent } from './components/bebidas/new-skills.component';
 import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { ForgotCodComponent } from './components/forgot-cod/forgot-cod.component';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { PedidosComponent } from './components/pedidos/pedidos.component';
 
 const routes: Routes = [
   {path:'',component: HomeComponent},
   {path:'login',component: LoginComponent},
-  {path:'nuevaexp', component: NewExperienciaComponent},
-  {path:'editexp', component: EditExperienciaComponent},
-  {path:'editexp/:id', component: EditExperienciaComponent},
-  {path:'nuevaedu', component: NeweducacionComponent},
-  {path:'editedu/:id', component: EditeducacionComponent},
-  { path: 'newskill', component: NewSkillComponent},
-  { path: 'editskill/:id', component: EditSkillComponent},
+  {path:'nuevaEntrada', component: NewEntradasComponent},
+  {path:'editEntrada/:id', component: EditEntradasComponent},
+  {path:'nuevoPlato', component: NeweducacionComponent},
+  {path:'editPlato/:id', component: EditeducacionComponent},
+  {path: 'reset-password', component:ResetPasswordComponent},
+  {path: 'forgot-password', component: ForgotPasswordComponent},
+  {path: 'forgot-cod', component: ForgotCodComponent},
+  { path: 'nuevaBebida', component: NewSkillComponent},
+  { path: 'editBebida/:id', component: EditSkillComponent},
   { path: 'editacercade/:id', component: EditAcercaDeComponent},
+  { path: 'pedidos', component: PedidosComponent },
   { path: '**', component: NotFoundComponent }
 ];
 

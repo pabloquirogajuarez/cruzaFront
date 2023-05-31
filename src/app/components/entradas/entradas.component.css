@@ -1,0 +1,35 @@
+/* estilos.css */
+
+h1{
+    font-weight: 800;
+}
+
+.menu-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.menu-item img {
+    max-width: 100%;
+}
+
+.menu-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.menu-item .precio {
+    font-weight: bold;
+}

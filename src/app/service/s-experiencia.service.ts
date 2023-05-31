@@ -7,8 +7,8 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class SExperienciaService {
-  URL = 'https://pback-pabloquirogajuarez.koyeb.app/explab/';
-  //URL = 'http://localhost:8080/explab/';
+  //URL = 'https://pback-pabloquirogajuarez.koyeb.app/explab/';
+  URL = 'http://localhost:8080/principal/';
 
   constructor(private httpClient: HttpClient) { }
 

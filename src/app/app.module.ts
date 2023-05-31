@@ -4,27 +4,32 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { LogoArgProgramaComponent } from './components/logo-arg-programa/logo-arg-programa.component';
+import { LogoArgProgramaComponent } from './components/nav-logos-cruza/logo-arg-programa.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
-import { ExperienciaComponent } from './components/experiencia/experiencia.component';
-import { EduComponent } from './components/edu/edu.component';
+import { EntradasComponent } from './components/entradas/entradas.component';
+import { EduComponent } from './components/platoprincipal/edu.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
-import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { interceptorProvider } from './service/interceptor-service';
-import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
-import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
-import { NeweducacionComponent } from './components/edu/neweducacion.component';
-import { EditeducacionComponent } from './components/edu/editeducacion.component';
-import { EditSkillComponent } from './components/skills/edit-skills.component';
-import { NewSkillComponent } from './components/skills/new-skills.component';
+import { NewEntradasComponent } from './components/entradas/new-entradas.component';
+import { EditEntradasComponent } from './components/entradas/edit-entradas.component';
+import { NeweducacionComponent } from './components/platoprincipal/neweducacion.component';
+import { EditeducacionComponent } from './components/platoprincipal/editeducacion.component';
 import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { ForgotCodComponent } from './components/forgot-cod/forgot-cod.component';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { SkillsComponent } from './components/bebidas/skills.component';
+import { EditSkillComponent } from './components/bebidas/edit-skills.component';
+import { NewSkillComponent } from './components/bebidas/new-skills.component';
+import { UbicacionComponent } from './components/ubicacion/ubicacion.component';
+import { PedidosComponent } from './components/pedidos/pedidos.component';
 
 @NgModule({
   declarations: [
@@ -33,21 +38,26 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     LogoArgProgramaComponent,
     BannerComponent,
     AcercaDeComponent,
-    ExperienciaComponent,
+    EntradasComponent,
     EduComponent,
-    SkillsComponent,
     ProyectosComponent,
     FooterComponent,
     HomeComponent,
     LoginComponent,
-    NewExperienciaComponent,
-    EditExperienciaComponent,
-    NeweducacionComponent,
-    EditeducacionComponent,
+    NewEntradasComponent,
+    EditEntradasComponent,
+    SkillsComponent,
     EditSkillComponent,
     NewSkillComponent,
+    NeweducacionComponent,
+    EditeducacionComponent,
     EditAcercaDeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ForgotPasswordComponent,
+    ForgotCodComponent,
+    ResetPasswordComponent,
+    UbicacionComponent,
+    PedidosComponent
   ],
   imports: [
     BrowserModule,

@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EducacionService {
-    URL = 'https://pback-pabloquirogajuarez.koyeb.app/educacion/';
-    //URL = 'http://localhost:8080/educacion/';
+    //URL = 'https://pback-pabloquirogajuarez.koyeb.app/educacion/';
+    URL = 'http://localhost:8080/entradas/';
   
     constructor(private httpClient : HttpClient) { }
 
