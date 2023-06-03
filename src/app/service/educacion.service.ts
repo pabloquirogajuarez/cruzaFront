@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EducacionService {
-    URL = 'https://cruzaback-production.up.railway.app/';
+    URL = 'https://cruzaback-production.up.railway.app/entradas/';
     //URL = 'http://localhost:8080/entradas/';
   
     constructor(private httpClient : HttpClient) { }

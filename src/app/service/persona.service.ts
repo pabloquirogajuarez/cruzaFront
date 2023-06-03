@@ -8,7 +8,7 @@ import { persona } from '../model/persona.model';
 })
 
 export class PersonaService {
-    URL = 'https://cruzaback-production.up.railway.app/';
+    URL = 'https://cruzaback-production.up.railway.app/personas/';
   //URL = 'http://localhost:8080/personas/'
 
   constructor(private httpClient: HttpClient) { }
