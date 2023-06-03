@@ -37,7 +37,7 @@ export class SkillsComponent {
         data => {
           this.cargarSkills();
         }, err => {
-          alert("No se pudo borrar la skill");
+          alert("No se pudo borrar la bebida");
         }
       )
     }

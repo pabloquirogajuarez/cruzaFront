@@ -25,7 +25,7 @@ export class NewEntradasComponent implements OnInit {
     const expe = new Experiencia(this.nombreE, this.descripcionE, this.fechaInicioE, this.fechaFinE);
     this.sExperiencia.save(expe).subscribe(
       data => {
-        this.successMessage = "Añadiste una nueva experiencia, redirigiendo...";
+        this.successMessage = "Añadiste una nueva entrada, redirigiendo...";
         setTimeout(() => {
           this.router.navigate(['']);
         }, 2500);

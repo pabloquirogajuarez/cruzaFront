@@ -27,12 +27,12 @@ export class NeweducacionComponent implements OnInit {
     const educacion = new Educacion(this.nombreE, this.descripcionE, this.fechaInicioE, this.fechaFinE);
     this.educacionS.save(educacion).subscribe(
       data =>{
-        this.successMessage = "Añadiste una nueva educación, redirigiendo...";
+        this.successMessage = "Añadiste un nuevo plato, redirigiendo...";
         setTimeout(() => {
           this.router.navigate(['']);
         }, 2500);
       }, err =>{
-        this.errorMessage = "Error al añadir la educación.";
+        this.errorMessage = "Error al añadir el plato.";
         setTimeout(() => {
           this.router.navigate(['']);
         }, 2500);

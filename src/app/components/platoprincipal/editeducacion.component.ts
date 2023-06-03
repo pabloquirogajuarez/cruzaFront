@@ -41,12 +41,12 @@ export class EditeducacionComponent implements OnInit {
     const id = this.activatedRouter.snapshot.params['id'];
     this.educacionS.update(id, this.educacion).subscribe(
       data => {
-        this.successMessage = "Educación editada correctamente, redirigiendo...";
+        this.successMessage = "Plato principal editado correctamente, redirigiendo...";
         setTimeout(() => {
           this.router.navigate(['']);
         }, 2500);
       }, err => {
-        this.errorMessage = "Error al modificar educación.";
+        this.errorMessage = "Error al modificar el plato.";
         setTimeout(() => {
           this.router.navigate(['']);
         }, 2500);
