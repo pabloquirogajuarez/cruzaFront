@@ -8,8 +8,8 @@ import { Skill } from '../model/skill';
   providedIn: 'root'
 })
 export class SkillService {
-  //URL = 'https://cruzaback-production.up.railway.app/';
-  URL = 'http://localhost:8080/bebidas/';
+  URL = 'https://cruzaback-production.up.railway.app/';
+  //URL = 'http://localhost:8080/bebidas/';
   
   constructor(private httpClient: HttpClient) { }
 
