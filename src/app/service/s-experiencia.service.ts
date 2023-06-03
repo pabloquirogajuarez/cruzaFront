@@ -7,7 +7,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class SExperienciaService {
-  //URL = 'https://pback-pabloquirogajuarez.koyeb.app/explab/';
+ // URL = 'https://cruzaback-production.up.railway.app/';
   URL = 'http://localhost:8080/principal/';
 
   constructor(private httpClient: HttpClient) { }

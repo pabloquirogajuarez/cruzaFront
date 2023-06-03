@@ -9,7 +9,7 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  //authURL = 'https://pback-pabloquirogajuarez.koyeb.app/auth/';
+  //authURL = 'https://cruzaback-production.up.railway.app/';
   authURL = 'http://localhost:8080/auth/';
 
   constructor(private httpClient: HttpClient) { }
