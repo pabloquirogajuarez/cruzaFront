@@ -3,12 +3,12 @@
 }
 
 .gradient-custom {
-  background-color: #99e4ff;
-  background-image:
-    radial-gradient(at 70% 83%, rgb(255, 255, 255) 0px, transparent 50%),
-    radial-gradient(at 67% 3%, rgb(23, 201, 255) 0px, transparent 50%),
-    radial-gradient(at 53% 40%, rgb(255, 255, 255) 0px, transparent 50%),
-    radial-gradient(at 73% 43%, rgb(59, 194, 247) 0px, transparent 50%);
+    background-image:
+        radial-gradient(at 70% 83%, #ffcc99 0px, transparent 50%),
+        radial-gradient(at 67% 3%, #ffb366 0px, transparent 50%),
+        radial-gradient(at 53% 40%, #ffa64d 0px, transparent 50%),
+        radial-gradient(at 73% 43%, #ff9933 0px, transparent 50%);
+    background-color: #ffdab3;
 }
 
 /* Resto de estilos del formulario y del footer */
