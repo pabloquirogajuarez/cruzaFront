@@ -14,6 +14,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { ForgotCodComponent } from './components/forgot-cod/forgot-cod.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
+import { NuevoPedidoComponent } from './components/pedidos/nuevo-pedido.component';
 
 const routes: Routes = [
   {path:'',component: HomeComponent},
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'editBebida/:id', component: EditSkillComponent},
   { path: 'editacercade/:id', component: EditAcercaDeComponent},
   { path: 'pedidos', component: PedidosComponent },
+  { path: 'pedidos/anadirPedido', component: NuevoPedidoComponent },
   { path: '**', component: NotFoundComponent }
 ];
 

@@ -30,6 +30,7 @@ import { EditSkillComponent } from './components/bebidas/edit-skills.component';
 import { NewSkillComponent } from './components/bebidas/new-skills.component';
 import { UbicacionComponent } from './components/ubicacion/ubicacion.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
+import { NuevoPedidoComponent } from './components/pedidos/nuevo-pedido.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { PedidosComponent } from './components/pedidos/pedidos.component';
     ForgotCodComponent,
     ResetPasswordComponent,
     UbicacionComponent,
-    PedidosComponent
+    PedidosComponent,
+    NuevoPedidoComponent,
   ],
   imports: [
     BrowserModule,
