@@ -31,6 +31,7 @@ import { NewSkillComponent } from './components/bebidas/new-skills.component';
 import { UbicacionComponent } from './components/ubicacion/ubicacion.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { NuevoPedidoComponent } from './components/pedidos/nuevo-pedido.component';
+import { HorariosComponent } from './components/horarios/horarios.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { NuevoPedidoComponent } from './components/pedidos/nuevo-pedido.componen
     UbicacionComponent,
     PedidosComponent,
     NuevoPedidoComponent,
+    HorariosComponent,
   ],
   imports: [
     BrowserModule,

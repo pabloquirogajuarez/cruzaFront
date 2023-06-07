@@ -1,0 +1,19 @@
+table {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+  
+  th,
+  td {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  @media (max-width: 767px) {
+    table {
+      max-width: none;
+    }
+  }
+  
+  
