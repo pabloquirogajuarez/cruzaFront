@@ -1,23 +1,47 @@
 <div class="container">
     <div class="row">
-        <div>
-            <form novalidate #f="ngForm">
+        <div class="row">
+            <div *ngIf="successMessage" class="alert alert-success" role="alert">
+                {{ successMessage }}
+              </div>
+              <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+                {{ errorMessage }}
+              </div>
+            <div>
+                <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="form-group">
-                    <label for="nombreE">Nombre cliente</label>
-                    <input type="text" class="form-control" id="nombreE" name="nombreE"  required>
+                    <label for="numeroPedido">Numero de pedido</label>
+                    <input type="text" class="form-control" id="numeroPedido" name="numeroPedido" [(ngModel)]="numeroPedido"  required>
                 </div>
                 <div class="form-group">
-                    <label for="fechaInicioE">Pedido</label>
-                    <input type="text" class="form-control" id="fechaInicioE" name="fechaInicioE"  required>
+                    <label for="numeroMesaPedido">Mesa</label>
+                    <input type="text" class="form-control" id="numeroMesaPedido" name="numeroMesaPedido" [(ngModel)]="numeroMesaPedido" required>
                 </div>
                 <div class="form-group">
-                    <label for="fechaInicioE">Observaciones</label>
-                    <input type="text" class="form-control" id="fechaInicioE" name="fechaInicioE"  required>
+                    <label for="nombreClientePedido">Nombre Cliente</label>
+                    <input type="text" class="form-control" id="nombreClientePedido" name="nombreClientePedido" [(ngModel)]="nombreClientePedido" required>
                 </div>
                 <div class="form-group">
-                    <label for="fechaInicioE">Total</label>
-                    <input type="text" class="form-control" id="fechaInicioE" name="fechaInicioE"  required>
+                    <label for="horarioPedido">Horario del pedido</label>
+                    <input type="text" class="form-control" id="horarioPedido" name="horarioPedido" [(ngModel)]="horarioPedido"  required>
                 </div>
+                <div class="form-group">
+                    <label for="pedido">Pedido</label>
+                    <input type="text" class="form-control" id="pedido" name="pedido"  required>
+                </div>
+                <div class="form-group">
+                    <label for="observacionesPedido">Observaciones del Pedido</label>
+                    <input type="text" class="form-control" id="observacionesPedido" name="observacionesPedido" [(ngModel)]="observacionesPedido"  required>
+                </div>
+                <div class="form-group">
+                    <label for="estadoPedido">Estado del pedido</label>
+                    <input type="text" class="form-control" id="estadoPedido" name="estadoPedido" [(ngModel)]="estadoPedido" required>
+                </div>
+                <div class="form-group">
+                    <label for="precioPedido">Precio total</label>
+                    <input type="text" class="form-control" id="precioPedido" name="precioPedido" [(ngModel)]="precioPedido" required>
+                </div>
+                
                 <button class="btn btn-primary">
                     Agregar pedido
                 </button>
