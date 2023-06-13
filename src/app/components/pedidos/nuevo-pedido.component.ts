@@ -33,12 +33,12 @@ export class NuevoPedidoComponent implements OnInit {
       data =>{
         this.successMessage = "Añadiste un nuevo pedido, redirigiendo...";
         setTimeout(() => {
-          this.router.navigate(['']);
+          this.router.navigate(['/pedidos']);
         }, 2500);
       }, err =>{
         this.errorMessage = "Error al añadir el pedido.";
         setTimeout(() => {
-          this.router.navigate(['']);
+          this.router.navigate(['/pedidos']);
         }, 2500);
       }
     )
