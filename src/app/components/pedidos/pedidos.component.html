@@ -35,10 +35,10 @@
                         <td class="text-center">
                             <button class="btn btn-secondary">Prearar pedido</button>
                             <button class="btn btn-success">Marcar como realizado</button>
-                            <button class="btn btn-danger">Cancelar pedido</button>
+                            <button class="btn btn-danger" (click)="delete(Pedidos.id)" >Cancelar pedido</button>
                         </td>
                         <td>
-                            <p class="status delivered">Entregado {{Pedidos.estadoPedido}}</p>
+                            <p class="status delivered">{{Pedidos.estadoPedido}}</p>
                         </td>
                         <td> <strong> {{Pedidos.precioPedido}} </strong></td>
                     </tr>
