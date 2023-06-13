@@ -6,7 +6,7 @@
                 <input type="search" placeholder="Buscar pedido...">
             </div>
             <div class="export__file">
-                <button class="btn btn-primary" routerLink="anadirPedido">+ Añadir pedido</button>
+                <button class="btn btn-primary" routerLink="anadirPedido" *ngIf="isLogged">+ Añadir pedido</button>
             </div>
         </section>
         <section class="table__body">
@@ -14,6 +14,7 @@
                 <thead>
                     <tr class="text-center">
                         <th>Numero de pedido</th>
+                        <th>Numero mesa</th>
                         <th>Nombre Cliente</th>
                         <th>Horario del pedido</th>
                         <th>Pedido</th>
@@ -23,102 +24,23 @@
                         <th>Precio del pedido</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td> #00001 </td>
-                        <td> <img src="../../../assets/USERlogo.jpg" alt="">Alex</td>
-                        <td> 22:00 hs - 04/Junio </td>
-                        <td>x3 Hamburguesa Completa, x3 Coca-Cola, x1 Fanta, 1x Cerveza</td>
-                        <td>Una hamburguesa sin cebolla</td>
+                <tbody >
+                    <tr *ngFor="let Pedidos of pedidos">
+                        <td>#{{Pedidos.numeroPedido}} </td>
+                        <td>N° {{Pedidos.numeroMesaPedido}}</td>
+                        <td> <img src="../../../assets/USERlogo.jpg" alt="">{{Pedidos.nombreClientePedido}}</td>
+                        <td> {{Pedidos.horarioPedido}} </td>
+                        <td>{{Pedidos.pedido}}</td>
+                        <td>{{Pedidos.observacionesPedido}}</td>
                         <td class="text-center">
                             <button class="btn btn-secondary">Prearar pedido</button>
                             <button class="btn btn-success">Marcar como realizado</button>
                             <button class="btn btn-danger">Cancelar pedido</button>
                         </td>
                         <td>
-                            <p class="status delivered">Entregado</p>
+                            <p class="status delivered">Entregado {{Pedidos.estadoPedido}}</p>
                         </td>
-                        <td> <strong> $128.90 </strong></td>
-                    </tr>
-                    <tr>
-                        <td> #00002 </td>
-                        <td><img src="../../../assets/USERlogo.jpg" alt="">Braian</td>
-                        <td> 22:00 hs - 04/Junio </td>
-                        <td>x3 Hamburguesa Completa, x3 Coca-Cola, x1 Fanta, 1x Cerveza</td>
-                        <td>Dos hambugesas sin cheddar</td>
-                        <td class="text-center">
-                            <button class="btn btn-secondary">Prearar pedido</button>
-                            <button class="btn btn-success">Marcar como realizado</button>
-                            <button class="btn btn-danger">Cancelar pedido</button>
-                        </td>
-                        <td>
-                            <p class="status cancelled">Cancelado</p>
-                        </td>
-                        <td> <strong> $128.90 </strong></td>
-                    </tr>
-                    <tr>
-                        <td> #00003 </td>
-                        <td><img src="../../../assets/USERlogo.jpg" alt="">Santos</td>
-                        <td> 22:00 hs - 04/Junio </td>
-                        <td>x3 Hamburguesa Completa, x3 Coca-Cola, x1 Fanta, 1x Cerveza</td>
-                        <td>Dos hambugesas sin cheddar</td>
-                        <td class="text-center">
-                            <button class="btn btn-secondary">Prearar pedido</button>
-                            <button class="btn btn-success">Marcar como realizado</button>
-                            <button class="btn btn-danger">Cancelar pedido</button>
-                        </td>
-                        <td>
-                            <p class="status pending">Pendiente</p>
-                        </td>
-                        <td> <strong> $128.90 </strong></td>
-                    </tr>
-                    <tr>
-                        <td> #00004 </td>
-                        <td><img src="../../../assets/USERlogo.jpg" alt="">Pablo</td>
-                        <td> 22:00 hs - 04/Junio </td>
-                        <td>x3 Hamburguesa Completa, x3 Coca-Cola, x1 Fanta, 1x Cerveza</td>
-                        <td>Dos hambugesas sin cheddar</td>
-                        <td class="text-center">
-                            <button class="btn btn-secondary">Prearar pedido</button>
-                            <button class="btn btn-success">Marcar como realizado</button>
-                            <button class="btn btn-danger">Cancelar pedido</button>
-                        </td>
-                        <td>
-                            <p class="status shipped">En preparación</p>
-                        </td>
-                        <td> <strong> $128.90 </strong></td>
-                    </tr>
-                    <tr>
-                        <td> #00005 </td>
-                        <td><img src="../../../assets/USERlogo.jpg" alt="">Laura</td>
-                        <td> 22:00 hs - 04/Junio </td>
-                        <td>x3 Hamburguesa Completa, x3 Coca-Cola, x1 Fanta, 1x Cerveza</td>
-                        <td>Dos hambugesas sin cheddar</td>
-                        <td class="text-center">
-                            <button class="btn btn-secondary">Prearar pedido</button>
-                            <button class="btn btn-success">Marcar como realizado</button>
-                            <button class="btn btn-danger">Cancelar pedido</button>
-                        </td>
-                        <td>
-                            <p class="status delivered">Entregado</p>
-                        </td>
-                        <td> <strong> $128.90 </strong></td>
-                    </tr>
-                    <tr>
-                        <td> #00006 </td>
-                        <td><img src="../../../assets/USERlogo.jpg" alt="">Pedro</td>
-                        <td> 22:00 hs - 04/Junio </td>
-                        <td>x3 Hamburguesa Completa, x3 Coca-Cola, x1 Fanta, 1x Cerveza</td>
-                        <td>Dos hambugesas sin cheddar</td>
-                        <td class="text-center">
-                            <button class="btn btn-secondary">Prearar pedido</button>
-                            <button class="btn btn-success">Marcar como realizado</button>
-                            <button class="btn btn-danger">Cancelar pedido</button>
-                        </td>
-                        <td>
-                            <p class="status pending">Pendiente</p>
-                        </td>
-                        <td> <strong> $128.90 </strong></td>
+                        <td> <strong> {{Pedidos.precioPedido}} </strong></td>
                     </tr>
                 </tbody>
             </table>
