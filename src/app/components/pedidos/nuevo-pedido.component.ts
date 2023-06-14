@@ -9,6 +9,8 @@ import { PedidosService } from 'src/app/service/pedidos.service';
   styleUrls: ['./nuevo-pedido.component.css']
 })
 export class NuevoPedidoComponent implements OnInit {
+
+  
   numeroPedido: string;
   numeroMesaPedido: string;
   nombreClientePedido: string;
@@ -18,16 +20,28 @@ export class NuevoPedidoComponent implements OnInit {
   estadoPedido: string;
   precioPedido: string;
 
+  numeroPedidoCounter = 0;
+
   //alerts
   successMessage: string;
   errorMessage: string;
 
-  constructor(private pedidosS: PedidosService, private router: Router) { }
+  // Variable para almacenar el último número de pedido
+  lastNumeroPedido: number = 0;
 
-  ngOnInit(): void {
-  }
+  constructor(private pedidosS: PedidosService, private router: Router) {}
 
-  onCreate(): void{
+  ngOnInit(): void {}
+
+  onCreate(): void {
+    const currentDate = new Date();
+    const currentDateTime = `${currentDate.getHours()}:${currentDate.getMinutes()} hs - ${currentDate.getDate()} ${currentDate.toLocaleString('default', { month: 'short' })}`;
+
+    this.lastNumeroPedido++; // Incrementa el último número de pedido
+    this.numeroPedido = String(this.lastNumeroPedido); // Asigna el valor al campo númeroPedido
+    this.horarioPedido = currentDateTime;
+    this.estadoPedido = 'Pendiente';
+
     const pedidos = new Pedidos(this.numeroPedido, this.numeroMesaPedido, this.nombreClientePedido, this.horarioPedido, this.pedido, this.observacionesPedido, this.estadoPedido, this.precioPedido);
     this.pedidosS.save(pedidos).subscribe(
       data =>{
