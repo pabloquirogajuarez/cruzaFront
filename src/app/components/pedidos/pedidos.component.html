@@ -34,7 +34,7 @@
                         <td>{{Pedidos.observacionesPedido}}</td>
                         <td class="text-center">
                             <button class="btn btn-secondary">Prearar pedido</button>
-                            <button class="btn btn-success">Marcar como realizado</button>
+                            <button class="btn btn-success" routerLink="/editarPedido/{{Pedidos.id}}">Marcar como realizado</button>
                             <button class="btn btn-danger" (click)="delete(Pedidos.id)" >Cancelar pedido</button>
                         </td>
                         <td>
