@@ -15,30 +15,33 @@ export class EditpedidosComponent implements OnInit {
   //alerts
   successMessage: string;
   errorMessage: string;
-  estadoPedido: string;
+  estadoPedidoNuevo: string;
 
 
   constructor(
     private pedidosS: PedidosService,
-    private activatedRouter : ActivatedRoute,
+    private activatedRouter: ActivatedRoute,
     private router: Router
   ) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.pedidosS.detail(id).subscribe(
-      data =>{
-        this.pedidos = data;
-      }, err =>{
-        this.errorMessage = "Error al modificar, revisa los campos.";
-        setTimeout(() => {
-          this.router.navigate(['']);
-        }, 2500);
-      }
-    )
-  }
+      this.pedidosS.detail(id).subscribe(
+        data => {
+          this.pedidos = data;
+          this.pedidos.estadoPedido = 'Realizando';
+        },
+        err => {
+          this.errorMessage = "Error al modificar, revisa los campos.";
+          setTimeout(() => {
+            this.router.navigate(['']);
+          }, 2500);
+        }
+      );
+    }
+    
 
-  onUpdate(): void{
+  onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.pedidosS.update(id, this.pedidos).subscribe(
       data => {
@@ -46,14 +49,15 @@ export class EditpedidosComponent implements OnInit {
         setTimeout(() => {
           this.router.navigate(['']);
         }, 2500);
-        this.estadoPedido = 'Realizado';
+        this.pedidos.estadoPedido = 'Realizado';
       }, err => {
         this.errorMessage = "Error al modificar.";
         setTimeout(() => {
           this.router.navigate(['']);
         }, 2500);
       }
-    )
+    );
   }
+  
+  
 }
-

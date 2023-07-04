@@ -25,27 +25,27 @@
                 
                 <div class="form-group">
                     <label for="numeroMesaPedido">Mesa</label>
-                    <input type="text" class="form-control" id="numeroMesaPedido" name="numeroMesaPedido" [(ngModel)]="pedidos.numeroMesaPedido" required>
+                    <input type="text" class="form-control" id="numeroMesaPedido" name="numeroMesaPedido" [(ngModel)]="pedidos.numeroMesaPedido" readonly required>
                 </div>
                 <div class="form-group">
                     <label for="nombreClientePedido">Nombre Cliente</label>
-                    <input type="text" class="form-control" id="nombreClientePedido" name="nombreClientePedido" [(ngModel)]="pedidos.nombreClientePedido" required>
+                    <input type="text" class="form-control" id="nombreClientePedido" name="nombreClientePedido" [(ngModel)]="pedidos.nombreClientePedido" readonly required>
                 </div>
                 <div class="form-group">
                     <label for="pedido">Pedido</label>
-                    <input type="text" class="form-control" id="pedido" name="pedido" [(ngModel)]="pedidos.pedido" required>
+                    <input type="text" class="form-control" id="pedido" name="pedido" [(ngModel)]="pedidos.pedido" readonly required>
                 </div>
                 <div class="form-group">
                     <label for="observacionesPedido">Observaciones del Pedido</label>
-                    <input type="text" class="form-control" id="observacionesPedido" name="observacionesPedido" [(ngModel)]="pedidos.observacionesPedido"  required>
+                    <input type="text" class="form-control" id="observacionesPedido" name="observacionesPedido" [(ngModel)]="pedidos.observacionesPedido" readonly required>
                 </div>
                 <div class="form-group">
                     <label for="precioPedido">Precio total</label>
-                    <input type="text" class="form-control" id="precioPedido" name="precioPedido" [(ngModel)]="pedidos.precioPedido" required>
+                    <input type="text" class="form-control" id="precioPedido" name="precioPedido" [(ngModel)]="pedidos.precioPedido" readonly required>
                 </div>
                 
-                <button class="btn btn-primary">
-                    Agregar pedido
+                <button type="submit" class="btn btn-primary">
+                    Cambiar estado
                 </button>
             </form>
         </div>
