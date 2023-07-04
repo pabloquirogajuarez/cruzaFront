@@ -29,7 +29,7 @@ export class EditpedidosComponent implements OnInit {
       this.pedidosS.detail(id).subscribe(
         data => {
           this.pedidos = data;
-          this.pedidos.estadoPedido = 'Realizando';
+          this.pedidos.estadoPedido = 'Realizado';
         },
         err => {
           this.errorMessage = "Error al modificar, revisa los campos.";
