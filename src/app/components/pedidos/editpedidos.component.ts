@@ -47,13 +47,13 @@ export class EditpedidosComponent implements OnInit {
       data => {
         this.successMessage = "editado correctamente, redirigiendo...";
         setTimeout(() => {
-          this.router.navigate(['']);
+          this.router.navigate(['/pedidos']);
         }, 2500);
         this.pedidos.estadoPedido = 'Realizado';
       }, err => {
         this.errorMessage = "Error al modificar.";
         setTimeout(() => {
-          this.router.navigate(['']);
+          this.router.navigate(['/pedidos']);
         }, 2500);
       }
     );
