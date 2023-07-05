@@ -16,6 +16,7 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { NuevoPedidoComponent } from './components/pedidos/nuevo-pedido.component';
 import { EditpedidosComponent } from './components/pedidos/editpedidos.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
   {path:'',component: HomeComponent},
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: 'pedidos', component: PedidosComponent },
   { path: 'pedidos/anadirPedido', component: NuevoPedidoComponent },
   { path: 'editarPedido/:id', component: EditpedidosComponent},
+  { path: 'dashboard', component: DashboardComponent},
   { path: '**', component: NotFoundComponent }
 ];
 

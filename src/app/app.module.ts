@@ -33,6 +33,7 @@ import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { NuevoPedidoComponent } from './components/pedidos/nuevo-pedido.component';
 import { HorariosComponent } from './components/horarios/horarios.component';
 import { EditpedidosComponent } from './components/pedidos/editpedidos.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { EditpedidosComponent } from './components/pedidos/editpedidos.component
     NuevoPedidoComponent,
     HorariosComponent,
     EditpedidosComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

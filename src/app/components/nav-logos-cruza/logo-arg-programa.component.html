@@ -9,9 +9,11 @@
                 <!--<a href=""><img src="../../../assets/twitter.png" id="twitter"></a> -->
                 <!--<a href=""><img src="../../../assets/facebook.png" id="facebook"></a> -->
                 
-                <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">Ingresar</button>
-                <button type="button" class="btn btn-outline-light" routerLink="pedidos" *ngIf="isLogged">Ver Pedidos</button>
-                <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesión</button>
+                <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged"> <i class="bi bi-person-fill"></i> Ingresar</button>
+                <button type="button" class="btn btn-outline-light" routerLink="dashboard" *ngIf="isLogged"> <i class="bi bi-person-fill-gear"></i> Admin </button>
+                <button type="button" class="btn btn-outline-light" routerLink="pedidos" *ngIf="isLogged"> <i class="bi bi-box-seam"></i> Ver Pedidos</button>
+                  
+                <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged"> <i class="bi bi-box-arrow-right"></i> Cerrar Sesión</button>
                 
             </div>            
         </div>
