@@ -1,0 +1,12 @@
+.card {
+    border-radius: .7rem;
+  }
+
+  .rating {
+    font-size: 20px;
+}
+
+.star {
+    color: #ffc107;
+    margin-right: 2px;
+}
