@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
-
+  fechaActual: Date;
+  constructor() {
+    this.fechaActual = new Date();
+  }
 }
