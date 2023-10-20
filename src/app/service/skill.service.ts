@@ -8,7 +8,7 @@ import { Skill } from '../model/skill';
   providedIn: 'root'
 })
 export class SkillService {
-  URL = 'https://cruzaback-pabloquirogajuarez.koyeb.app/bebidas/';
+  URL = 'https://cruzaback-braian-cardozooo.koyeb.app/bebidas/';
   //URL = 'http://localhost:8080/bebidas/';
   
   constructor(private httpClient: HttpClient) { }
