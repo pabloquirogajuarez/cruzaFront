@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="row">
+        <div class="row">
+            <div *ngIf="successMessage" class="alert alert-success" role="alert">
+                {{ successMessage }}
+              </div>
+              <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+                {{ errorMessage }}
+              </div>
+            <div>
+                <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <!-- <div class="form-group">
+                    <label for="numeroPedido">Numero de pedido</label>
+                    <input type="text" class="form-control" id="numeroPedido" name="numeroPedido" placeholder="Autocompletado" [(ngModel)]="numeroPedido"  readonly required>
+                </div> 
+                <div class="form-group">
+                    <label for="horarioPedido">Horario del pedido</label>
+                    <input type="text" class="form-control" id="horarioPedido" name="horarioPedido" placeholder="Hora actual - Autocompletado" [(ngModel)]="horarioPedido"  readonly required>
+                </div>
+                <div class="form-group">
+                    <label for="estadoPedido">Estado del pedido</label>
+                    <input type="text" class="form-control" id="estadoPedido" name="estadoPedido" placeholder="Pendiente - Autocompletado" [(ngModel)]="estadoPedido" readonly required>
+                </div>
+                -->
+                <div class="form-group">
+                    <label for="numeroMesaPedido">Mesa</label>
+                    <input type="text" class="form-control" id="numeroReserva" name="numeroReserva" [(ngModel)]="numeroReserva" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombreClientePedido">Nombre Cliente</label>
+                    <input type="text" class="form-control" id="nombreClientePedido" name="nombreClientePedido" [(ngModel)]="nombreClienteReserva" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefonoReserva">Teléfono</label>
+                    <input type="text" class="form-control" id="telefonoReserva" name="telefonoReserva" [(ngModel)]="telefonoReserva" required>
+                </div>
+                <div class="form-group">
+                    <label for="fechaReserva">Fecha de la reserva</label>
+                    <input type="date" class="form-control" id="fechaReserva" name="fechaReserva" [(ngModel)]="fechaReserva"  required>
+                </div>
+                <div class="form-group">
+                    <label for="horaReserva">Hora de reserva</label>
+                    <input type="text" class="form-control" id="horaReserva" name="horaReserva" [(ngModel)]="horaReserva" required>
+                </div>
+                <div class="form-group">
+                    <label for="numeroPersonasReserva">Numero de personas</label>
+                    <input type="text" class="form-control" id="numeroPersonasReserva" name="numeroPersonasReserva" [(ngModel)]="numeroPersonasReserva" required>
+                </div>
+                <div class="form-group">
+                    <label for="eventoReserva">Tipo de evento</label>
+                    <input type="text" class="form-control" id="eventoReserva" name="eventoReserva" [(ngModel)]="eventoReserva" required>
+                </div>
+                <div class="form-group">
+                    <label for="observacionesReserva">Observaciones</label>
+                    <input type="text" class="form-control" id="observacionesReserva" name="observacionesReserva" [(ngModel)]="observacionesReserva" required>
+                </div>
+                
+                <button class="btn btn-primary">
+                    Agregar reserva
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

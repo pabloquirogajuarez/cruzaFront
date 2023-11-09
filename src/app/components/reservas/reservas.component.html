@@ -1,0 +1,35 @@
+<div class="card-box">
+    <h4 class="header-title mb-3">Administrar reservas</h4>
+    <button type="button" class="btn btn-primary" routerLink="anadirReserva" *ngIf="isLogged"><i class="bi bi-plus-circle-fill"></i> Añadir reserva</button>
+    <div class="table-responsive">
+      <table class="table">
+          <thead>
+              <tr>
+                  <th>N° Reserva</th>
+                  <th>Nombre del cliente</th>
+                  <th>Teléfono</th>
+                  <th>Fecha de reserva</th>
+                  <th>Hora de reserva</th>
+                  <th>Numero de personas</th>
+                  <th>Tipo de evento</th>
+                  <th>Observaciones</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let Reservas of reservas">
+                  <td>#{{Reservas.numeroReserva}}</td>
+                  <td>{{Reservas.nombreClienteReserva}}</td>
+                  <td>{{Reservas.telefonoReserva}}</td>
+                  <td>{{Reservas.fechaReserva}}</td>
+                  <td><span class="label label-info">{{Reservas.horaReserva}}</span></td>
+                  <td>{{Reservas.numeroPersonasReserva}}</td>
+                  <td>{{Reservas.eventoReserva}}</td>
+                  <td>{{Reservas.observacionesReserva}}</td>
+                  <td class="text-center">
+                    <button class="btn btn-danger" (click)="delete(Reservas.id)" ><i class="bi bi-trash"></i></button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>

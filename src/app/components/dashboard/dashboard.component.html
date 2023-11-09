@@ -22,16 +22,15 @@
           <div class="col-xl-4">
               <!-- Personal-Information -->
               <div class="card-box">
-                <h4 class="header-title mt-0">Fecha actual</h4>
-                <p>{{ fechaActual | date:'dd/MM/yyyy' }} - {{ horaActual }} hs</p>       
-                <p></p>       
+                <h4 class="header-title mt-0">{{ fechaActual | date:'dd/MM/yyyy' }} - {{ horaActual }} hs</h4>
+                      
+                <p></p>      
                   <div class="panel-body">
                     
                       <hr>
                       <div class="text-left">
-                          <p class="text-muted font-13"><strong>Full Name :</strong> <span class="m-l-15">Ejemplo</span></p>
-                          <p class="text-muted font-13"><strong>Mobile :</strong><span class="m-l-15">(+54) 123 1234 567</span></p>
-                          <p class="text-muted font-13"><strong>Email :</strong> <span class="m-l-15">ejemplo@gmail.com</span></p>
+                          <p class="text-muted font-13"><strong>Teléfono:</strong><span class="m-l-15"> +54 123456789</span></p>
+                          <p class="text-muted font-13"><span class="m-l-15">Club Hipico - Santiago del Estero</span></p>
                       </div>
                   </div>
               </div>
@@ -134,119 +133,43 @@
                   </div>
                   <!-- end col -->
               </div>
-              <!-- end row -->
-              <div class="card-box">
-                  <h4 class="header-title mb-3">Administrar reservas</h4>
-                  <button type="button" class="btn btn-primary"><i class="bi bi-plus-circle-fill"></i> Añadir reserva</button>
-                  <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>N° Reserva</th>
-                                <th>Nombre del cliente</th>
-                                <th>Teléfono</th>
-                                <th>Fecha de reserva</th>
-                                <th>Hora de reserva</th>
-                                <th>Numero de personas</th>
-                                <th>Tipo de evento</th>
-                                <th>Observaciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Pablo</td>
-                                <td>123456789</td>
-                                <td>27/09/23</td>
-                                <td><span class="label label-info">19:00 hs</span></td>
-                                <td>6</td>
-                                <td>Cumpleaños</td>
-                                <td>ninguna.</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Braian</td>
-                                <td>123456789</td>
-                                <td>27/09/23</td>
-                                <td><span class="label label-info">19:00 hs</span></td>
-                                <td>6</td>
-                                <td>Cumpleaños</td>
-                                <td>ninguna.</td>
-                            </tr>
-                            <tr>
-                              <td>3</td>
-                              <td>Alex</td>
-                              <td>123456789</td>
-                              <td>27/09/23</td>
-                              <td><span class="label label-info">19:00 hs</span></td>
-                              <td>6</td>
-                              <td>Cumpleaños</td>
-                              <td>ninguna.</td>
-                          </tr>
-                          <tr>
-                            <td>4</td>
-                            <td>Santos</td>
-                            <td>123456789</td>
-                            <td>27/09/23</td>
-                            <td><span class="label label-info">19:00 hs</span></td>
-                            <td>6</td>
-                            <td>Cumpleaños</td>
-                            <td>ninguna.</td>
-                        </tr>
-                        <tr>
-                          <td>5</td>
-                          <td>Lucas</td>
-                          <td>123456789</td>
-                          <td>27/09/23</td>
-                          <td><span class="label label-info">19:00 hs</span></td>
-                          <td>6</td>
-                          <td>Cumpleaños</td>
-                          <td>ninguna.</td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td>Fran</td>
-                        <td>123456789</td>
-                        <td>27/09/23</td>
-                        <td><span class="label label-info">19:00 hs</span></td>
-                        <td>6</td>
-                        <td>Cumpleaños</td>
-                        <td>ninguna.</td>
-                    </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <h4 class="header-title mb-3">Historial de ingresos</h4>
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Fecha</th>
-                                <th>Ingresos</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>06/10/23</td>
-                                <td>$ 40.000</td>
-                                <button>Ver detalles</button>
-                            </tr>
-                            <tr>
-                              <td>05/10/23</td>
-                              <td>$ 40.000</td>
-                              <button>Ver detalles</button>
-                            </tr>
-                            <tr>
-                              <td>04/10/23</td>
-                              <td>$ 40.000</td>
-                              <button>Ver detalles</button>
-                          </tr>
-                        </tbody>
-                    </table>
-                </div>
-              </div>
-          </div>
-          <!-- end col -->
+              <!-->>> reservas >>>-->
+              <app-reservas></app-reservas>
+          <!--<<< reservas <<<-->
+          <!--#### ADMIN PEDIDOS #### -->
+          <div class="card-box">
+            <h4 class="header-title mb-3">Administrar pedidos</h4>
+            <button type="button" class="btn btn-primary" routerLink="pedidos-admin">Administrar pedidos</button>
+        </div>
+        <!-- #### FIN ADMIN PEDIDOS ####  -->
+          <h4 class="header-title mb-3">Historial de ingresos</h4>
+  <div class="table-responsive">
+      <table class="table">
+          <thead>
+              <tr>
+                  <th>Fecha</th>
+                  <th>Ingresos</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>06/10/23</td>
+                  <td>$ 40.000</td>
+                  <button>Ver detalles</button>
+              </tr>
+              <tr>
+                <td>05/10/23</td>
+                <td>$ 40.000</td>
+                <button>Ver detalles</button>
+              </tr>
+              <tr>
+                <td>04/10/23</td>
+                <td>$ 40.000</td>
+                <button>Ver detalles</button>
+            </tr>
+          </tbody>
+      </table>
+  </div>
       </div>
       <!-- end row -->
   </div>

@@ -17,6 +17,8 @@ import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { NuevoPedidoComponent } from './components/pedidos/nuevo-pedido.component';
 import { EditpedidosComponent } from './components/pedidos/editpedidos.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { NuevaReservaComponent } from './components/reservas/nueva-reserva.component';
+import { PedidosAdminComponent } from './components/pedidos/pedidos-admin.component';
 
 const routes: Routes = [
   {path:'',component: HomeComponent},
@@ -33,8 +35,10 @@ const routes: Routes = [
   { path: 'editacercade/:id', component: EditAcercaDeComponent},
   { path: 'pedidos', component: PedidosComponent },
   { path: 'pedidos/anadirPedido', component: NuevoPedidoComponent },
+  { path: 'dashboard/anadirReserva', component: NuevaReservaComponent },
   { path: 'editarPedido/:id', component: EditpedidosComponent},
   { path: 'dashboard', component: DashboardComponent},
+  { path: 'dashboard/pedidos-admin', component: PedidosAdminComponent },
   { path: '**', component: NotFoundComponent }
 ];
 

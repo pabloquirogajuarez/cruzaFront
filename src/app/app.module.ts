@@ -35,6 +35,9 @@ import { HorariosComponent } from './components/horarios/horarios.component';
 import { EditpedidosComponent } from './components/pedidos/editpedidos.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ResenasComponent } from './components/resenas/resenas.component';
+import { ReservasComponent } from './components/reservas/reservas.component';
+import { NuevaReservaComponent } from './components/reservas/nueva-reserva.component';
+import { PedidosAdminComponent } from './components/pedidos/pedidos-admin.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +71,9 @@ import { ResenasComponent } from './components/resenas/resenas.component';
     EditpedidosComponent,
     DashboardComponent,
     ResenasComponent,
+    ReservasComponent,
+    NuevaReservaComponent,
+    PedidosAdminComponent,
   ],
   imports: [
     BrowserModule,
