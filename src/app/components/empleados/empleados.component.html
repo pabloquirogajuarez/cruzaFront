@@ -1,0 +1,13 @@
+<div class="ribbon ribbon-primary"><h4>Administrar empleados</h4></div>
+<button type="button" class="btn btn-primary" routerLink="anadirEmpleado" *ngIf="isLogged"><i class="bi bi-plus-circle-fill"></i> Añadir empleado</button>
+<div class="clearfix"></div>
+<div class="inbox-widget">
+    <a href="#">
+        <div class="inbox-item" *ngFor="let Empleados of empleados">
+            <div class="inbox-item-img"><img src="../../../assets/USERlogo.jpg" class="rounded-circle" alt=""></div>
+            <p class="inbox-item-author">{{Empleados.nombreEmpleado}}</p>
+            <p class="inbox-item-text">{{Empleados.rolEmpleado}}</p>
+            <p class="inbox-item-date">
+                <button type="button" class="btn btn-icon btn-sm waves-effect waves-light btn-danger"><i class="bi bi-trash-fill"></i></button>
+            </p>
+        </div>

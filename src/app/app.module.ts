@@ -42,6 +42,8 @@ import { InfoDashboardComponent } from './components/info-dashboard/info-dashboa
 import { IngresosComponent } from './components/ingresos/ingresos.component';
 import {NuevoIngresoComponent } from './components/ingresos/nuevo-ingreso.component';
 import { EdipedidospreparandoComponent } from './components/pedidos/edipedidospreparando.component';
+import { EmpleadosComponent } from './components/empleados/empleados.component';
+import { NuevoEmpleadoComponent } from './components/empleados/nuevo-empleado.component';
 
 @NgModule({
   declarations: [
@@ -82,6 +84,8 @@ import { EdipedidospreparandoComponent } from './components/pedidos/edipedidospr
     IngresosComponent,
     NuevoIngresoComponent,
     EdipedidospreparandoComponent,
+    EmpleadosComponent,
+    NuevoEmpleadoComponent,
   ],
   imports: [
     BrowserModule,

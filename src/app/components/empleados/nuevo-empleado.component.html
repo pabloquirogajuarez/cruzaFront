@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="row">
+            <div *ngIf="successMessage" class="alert alert-success" role="alert">
+                {{ successMessage }}
+            </div>
+            <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+                {{ errorMessage }}
+            </div>
+            <div>
+                <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                    <div class="form-group">
+                        <label for="nombreEmpleado">Nombre del empleado</label>
+                        <input type="text" class="form-control" id="nombreEmpleado" name="nombreEmpleado" [(ngModel)]="nombreEmpleado" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rolEmpleado">Rol</label>
+                        <select class="form-control" id="rolEmpleado" name="rolEmpleado" [(ngModel)]="rolEmpleado" required>
+                            <option value="Dueño">Dueño</option>
+                            <option value="Gerente">Gerente</option>
+                            <option value="Administrador">Administrador</option>
+                            <option value="Cocinero">Cocinero</option>
+                            <option value="Mozo">Mozo</option>
+                            <option value="Limpieza">Limpieza</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary">
+                        Agregar empleado
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
