@@ -9,8 +9,8 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  //authURL = 'https://cruzapi-pabloquirogajuarez.koyeb.app/auth/';
-  authURL = 'http://localhost:8080/auth/';
+  authURL = 'https://cruzaback-production.up.railway.app/auth/';
+  //authURL = 'http://localhost:8080/auth/';
 
   constructor(private httpClient: HttpClient) { }
 

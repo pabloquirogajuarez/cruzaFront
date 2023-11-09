@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EmpleadosService {
-    //URL = 'https://cruzapi-pabloquirogajuarez.koyeb.app/empleados/';
-    URL = 'http://localhost:8080/empleados/';
+    URL = 'https://cruzaback-production.up.railway.app/empleados/';
+    //URL = 'http://localhost:8080/empleados/';
   
     constructor(private httpClient : HttpClient) { }
 
