@@ -45,7 +45,7 @@ export class EditpedidosComponent implements OnInit {
     const id = this.activatedRouter.snapshot.params['id'];
     this.pedidosS.update(id, this.pedidos).subscribe(
       data => {
-        this.successMessage = "editado correctamente, redirigiendo...";
+        this.successMessage = "redirigiendo...";
         setTimeout(() => {
           this.router.navigate(['/pedidos']);
         }, 2500);
