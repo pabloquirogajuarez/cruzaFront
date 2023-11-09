@@ -19,6 +19,8 @@ import { EditpedidosComponent } from './components/pedidos/editpedidos.component
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NuevaReservaComponent } from './components/reservas/nueva-reserva.component';
 import { PedidosAdminComponent } from './components/pedidos/pedidos-admin.component';
+import { NuevoIngresoComponent } from './components/ingresos/nuevo-ingreso.component';
+import { EdipedidospreparandoComponent } from './components/pedidos/edipedidospreparando.component';
 
 const routes: Routes = [
   {path:'',component: HomeComponent},
@@ -37,10 +39,12 @@ const routes: Routes = [
   { path: 'pedidos/anadirPedido', component: NuevoPedidoComponent },
   { path: 'dashboard/anadirReserva', component: NuevaReservaComponent },
   { path: 'editarPedido/:id', component: EditpedidosComponent},
+  { path: 'prepararPedido/:id', component: EdipedidospreparandoComponent}, 
   { path: 'dashboard', component: DashboardComponent},
   { path: 'dashboard/pedidos-admin', component: PedidosAdminComponent },
   { path: 'dashboard/pedidos-admin/anadirPedido', component: NuevoPedidoComponent },
   { path: 'dashboard/pedidos-admin/editarPedido/:id', component: EditpedidosComponent},
+  { path: 'dashboard/anadirIngreso', component: NuevoIngresoComponent },
   { path: '**', component: NotFoundComponent }
 ];
 

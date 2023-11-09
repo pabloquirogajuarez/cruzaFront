@@ -1,1 +1,21 @@
-<p>ingresos works!</p>
+<h4 class="header-title mb-3">Historial de ingresos</h4>
+<button type="button" class="btn btn-primary" routerLink="anadirIngreso" *ngIf="isLogged"><i class="bi bi-plus-circle-fill"></i> Añadir ingreso</button>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Ingresos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let Ingresos of ingresos">
+                <td>{{Ingresos.fechaIngreso}}</td>
+                <td>${{Ingresos.gananciaIngreso}}</td>
+                <td class="text-center">
+                    <button class="btn btn-danger" (click)="delete(Ingresos.id)" ><i class="bi bi-trash"></i></button>
+                  </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

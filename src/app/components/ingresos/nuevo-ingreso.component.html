@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="row">
+            <div *ngIf="successMessage" class="alert alert-success" role="alert">
+                {{ successMessage }}
+              </div>
+              <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+                {{ errorMessage }}
+              </div>
+            <div>
+                <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="fechaIngreso">Fecha</label>
+                    <input type="date" class="form-control" id="fechaIngreso" name="fechaIngreso" [(ngModel)]="fechaIngreso" required>
+                </div>
+                <div class="form-group">
+                    <label for="gananciaIngreso">Ganancia</label>
+                    <input type="text" class="form-control" id="gananciaIngreso" name="gananciaIngreso" [(ngModel)]="gananciaIngreso" required>
+                
+                <button class="btn btn-primary">
+                    Agregar ingreso
+                </button>
+            <form>

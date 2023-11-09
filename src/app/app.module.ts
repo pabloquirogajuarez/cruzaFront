@@ -40,6 +40,8 @@ import { NuevaReservaComponent } from './components/reservas/nueva-reserva.compo
 import { PedidosAdminComponent } from './components/pedidos/pedidos-admin.component';
 import { InfoDashboardComponent } from './components/info-dashboard/info-dashboard.component';
 import { IngresosComponent } from './components/ingresos/ingresos.component';
+import {NuevoIngresoComponent } from './components/ingresos/nuevo-ingreso.component';
+import { EdipedidospreparandoComponent } from './components/pedidos/edipedidospreparando.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +80,8 @@ import { IngresosComponent } from './components/ingresos/ingresos.component';
     PedidosAdminComponent,
     InfoDashboardComponent,
     IngresosComponent,
+    NuevoIngresoComponent,
+    EdipedidospreparandoComponent,
   ],
   imports: [
     BrowserModule,

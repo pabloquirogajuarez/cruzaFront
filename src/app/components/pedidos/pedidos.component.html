@@ -22,8 +22,8 @@
                         <!-- <th>Horario del pedido</th> -->
                         <th>Pedido</th>
                         <th>Observaciones</th>
-                        <!-- <th class="text-center">Acciones</th> -->
-                        <!-- <th class="text-center">Estado actual del pedido</th> -->
+                         <th class="text-center">Acciones</th> 
+                         <th class="text-center">Estado actual del pedido</th> 
                        <!-- <th>Precio del pedido</th> -->
                     </tr>
                 </thead>
@@ -35,15 +35,15 @@
                          <!-- <td> {{Pedidos.horarioPedido}} </td> -->
                         <td>{{Pedidos.pedido}}</td>
                         <td>{{Pedidos.observacionesPedido}}</td>
-                        <!-- <td class="text-center">
-                            <button class="btn btn-secondary">Prearar pedido</button> 
-                           <!-- <button class="btn btn-success" routerLink="/editarPedido/{{Pedidos.id}}">Marcar como realizado</button> -->
-                           <!-- <button class="btn btn-danger" (click)="delete(Pedidos.id)" >Cancelar pedido</button> 
-                        </td> -->
-                        <!--<td>
+                         <td class="text-center">
+                             <button class="btn btn-secondary" routerLink="/prepararPedido/{{Pedidos.id}}">Prearar pedido</button> 
+                            <button class="btn btn-success" routerLink="/editarPedido/{{Pedidos.id}}">Marcar como realizado</button> 
+                            <!--<button class="btn btn-danger" (click)="delete(Pedidos.id)" >Cancelar pedido</button> -->
+                        </td> 
+                        <td>
                             <p class="status delivered">{{Pedidos.estadoPedido}}</p>
                         </td>
-                        <td> <strong> {{Pedidos.precioPedido}} </strong></td> -->
+                        <!-- <td> <strong> {{Pedidos.precioPedido}} </strong></td> -->
                     </tr>
                 </tbody>
             </table>
