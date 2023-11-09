@@ -26,7 +26,7 @@ export class NuevoEmpleadoComponent implements OnInit {
     const empleados = new Empleados(this.nombreEmpleado, this.rolEmpleado);
     this.empleadosS.save(empleados).subscribe(
       data =>{
-        this.successMessage = "Añadiste un nuevo ingreso, redirigiendo...";
+        this.successMessage = "Añadiste un nuevo empleado, redirigiendo...";
         setTimeout(() => {
           this.router.navigate(['/dashboard']);
         }, 2500);
