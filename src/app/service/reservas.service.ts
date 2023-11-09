@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ReservasService {
-    URL = 'https://cruzapi-pabloquirogajuarez.koyeb.app/reservas/';
+    URL = 'https://cruzaback-production.up.railway.app/reservas/';
     //URL = 'http://localhost:8080/reservas/';
   
     constructor(private httpClient : HttpClient) { }
