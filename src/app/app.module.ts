@@ -39,6 +39,7 @@ import { ReservasComponent } from './components/reservas/reservas.component';
 import { NuevaReservaComponent } from './components/reservas/nueva-reserva.component';
 import { PedidosAdminComponent } from './components/pedidos/pedidos-admin.component';
 import { InfoDashboardComponent } from './components/info-dashboard/info-dashboard.component';
+import { IngresosComponent } from './components/ingresos/ingresos.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import { InfoDashboardComponent } from './components/info-dashboard/info-dashboa
     NuevaReservaComponent,
     PedidosAdminComponent,
     InfoDashboardComponent,
+    IngresosComponent,
   ],
   imports: [
     BrowserModule,
