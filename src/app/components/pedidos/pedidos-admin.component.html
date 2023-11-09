@@ -9,7 +9,7 @@
                 <button class="btn btn-primary" routerLink="anadirPedido" *ngIf="isLogged">+ Añadir pedido</button>
             </div>
         </section>
-        <button class="btn btn-primary" routerLink="/">
+        <button class="btn btn-primary" routerLink="/dashboard">
             <i class="bi bi-arrow-left"></i> Volver al inicio
         </button>
         <section class="table__body">
@@ -43,7 +43,7 @@
                         <td>
                             <p class="status delivered">{{Pedidos.estadoPedido}}</p>
                         </td>
-                        <td> <strong> {{Pedidos.precioPedido}} </strong></td>
+                        <td> <strong>${{Pedidos.precioPedido}} </strong></td>
                     </tr>
                 </tbody>
             </table>

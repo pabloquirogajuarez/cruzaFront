@@ -50,7 +50,7 @@ export class NuevoPedidoComponent implements OnInit {
           this.router.navigate(['/pedidos']);
         }, 2500);
       }, err =>{
-        this.errorMessage = "Error al añadir el pedido.";
+        this.errorMessage = "Espere porfavor...";
       }
     )
   }

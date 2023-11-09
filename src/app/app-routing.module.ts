@@ -39,6 +39,8 @@ const routes: Routes = [
   { path: 'editarPedido/:id', component: EditpedidosComponent},
   { path: 'dashboard', component: DashboardComponent},
   { path: 'dashboard/pedidos-admin', component: PedidosAdminComponent },
+  { path: 'dashboard/pedidos-admin/anadirPedido', component: NuevoPedidoComponent },
+  { path: 'dashboard/pedidos-admin/editarPedido/:id', component: EditpedidosComponent},
   { path: '**', component: NotFoundComponent }
 ];
 
