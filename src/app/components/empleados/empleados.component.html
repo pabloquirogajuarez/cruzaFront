@@ -8,6 +8,6 @@
             <p class="inbox-item-author">{{Empleados.nombreEmpleado}}</p>
             <p class="inbox-item-text">{{Empleados.rolEmpleado}}</p>
             <p class="inbox-item-date">
-                <button type="button" class="btn btn-icon btn-sm waves-effect waves-light btn-danger"><i class="bi bi-trash-fill"></i></button>
+                <button type="button" class="btn btn-icon btn-sm waves-effect waves-light btn-danger" (click)="delete(Empleados.id)"><i class="bi bi-trash-fill"></i></button>
             </p>
         </div>
