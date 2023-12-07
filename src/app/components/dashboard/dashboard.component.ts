@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const isAdmin = this.tokenService.hasRole('admin');
+    const isAdmin = this.tokenService.hasRole('ROLE_ADMIN');
     if (!isAdmin) {
       this.router.navigate(['/']); 
     }
