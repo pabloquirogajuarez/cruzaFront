@@ -46,6 +46,12 @@ export class TokenService {
     return this.roles;
   }
 
+  //verificar si el usuario actual tiene un rol específico
+  public hasRole(role: string): boolean {
+    const roles = this.getAuthorities();
+    return roles.includes(role);
+  }
+
   public logOut(): void{
     window.sessionStorage.clear();
   }

@@ -9,12 +9,14 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class LogoArgProgramaComponent implements OnInit {
   isLogged = false;
+  isAdmin = false;
 
   constructor(private router:Router, private tokenService: TokenService) { }
 
   ngOnInit(): void {
     if(this.tokenService.getToken()){
-      this.isLogged=true;
+      this.isLogged = true;
+      this.isAdmin = this.tokenService.hasRole('ROLE_ADMIN');
     }else{
       this.isLogged = false;
     }
